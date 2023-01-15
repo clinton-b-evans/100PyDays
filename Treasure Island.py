@@ -26,20 +26,36 @@ print("Your mission is to find the treasure.")
 #https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
 
 #Write your code below this line 👇
-answer = input("You're at a crossroad, where do you want to go? Type \"left\" or \"right\". ")
-if answer.lower() == "left":
-    answer = input("You come to a shore. Can \"swim\" or \"wait\"? ")
-    if answer.lower() == "wait":
-      answer = input("You arrive on the other shore and are faced with three doors. Which door do you open? The \"red\" one, the \"blue\" one or the \"yellow\" one? ")
+answer = input("You're at a crossroad, where do you want to go? Type \"left\" or \"right\". \n").lower()
+if answer == "left":
+    answer = input("You've come to a lake. There is an island in middle of the lake. You can \"swim\" or \"wait\" for a boat?\n").lower()
+    if answer == "wait":
+      answer = input("You arrive on the other shore and are faced with three doors. Which door do you open? The \"red\" one, the \"blue\" one or the \"yellow\" one?\n").lower()
       if answer == "yellow":
         print("Well done! You've found the treasure!!")
       elif answer == "red":
         print("Burned by fire. Game Over.")
       elif answer == "blue":
+        print('''
+         
+  oo`'._..---.___..-
+ (_,-.        ,..'`
+      `'.    ;
+         : :`
+        _;_;  
+        ''')
         print("Eaten by beasts. Game Over.")
       else:
         print("Game Over.")
     else:
+      print('''
+                                              _J""-.
+                  .-""L_                     /o )   \ ,';
+             ;`, /   ( o\                    \ ,'    ;  /
+             \  ;    `, /                     "-.__.'"\_;
+             ;_/"`.__.-"
+                          
+      ''')
       print("Attacked by trout. Game Over.")
 else:
   print("Fall into a hole. Game Over.")
